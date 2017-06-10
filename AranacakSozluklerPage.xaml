@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OsmLugat.AranacakSozluklerPage"
+                  IsPresented="True"
+                  >
+
+  <MasterDetailPage.Master>
+
+
+
+    <ContentPage Padding="0,20,0,0" Title="Şu Sözlüklerde Ara">
+
+      
+ <TableView Intent="Settings">
+
+
+
+    <TableRoot>
+      <TableSection Title="Şu Sözlüklerde Ara">
+         
+        <SwitchCell   Text="Kubbe Altı" On="{Binding Kubbe}"  />
+        <SwitchCell   Text="Kamus" On="{Binding Kamus}"    />
+        <SwitchCell   Text="İsam" On="{Binding Isam}"    />
+        <SwitchCell   Text="Vankulu" On="{Binding Vankulu}"   />
+         <SwitchCell   Text="Abdullah Yeğin" On="{Binding Abdullah}"   />
+       
+        
+      </TableSection>
+
+    </TableRoot>
+
+  </TableView>
+
+    </ContentPage>
+  </MasterDetailPage.Master>
+
+  <MasterDetailPage.Detail>
+    <ContentPage/>
+
+
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
+
+
+

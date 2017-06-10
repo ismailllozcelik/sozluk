@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+   Padding="0,20,0,0"
+        xmlns="http://xamarin.com/schemas/2014/forms"
+         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         x:Class="OsmLugat.ArananKelimePage"
+  >
+
+
+
+
+  <StackLayout>
+
+
+
+    <SearchBar Placeholder="Aranacak Kelime..." TextChanged="Handle_TextChanged"  />
+    <ListView x:Name="listView" HasUnevenRows="True" ItemSelected="Handle_ItemSelected" >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Vertical" Padding="5" >
+              <StackLayout  >
+                <Label Text="{Binding SozlukAdi}" FontFamily="Times New Roman" YAlign="Center"    TextColor="Red" />
+                <Label Text="{Binding Kelime}" FontFamily="Times New Roman"  YAlign="Center"    TextColor="Blue" />
+                <Label Text="{Binding Mana}" FontFamily="Times New Roman"  YAlign="Center"      TextColor="Black" />
+              </StackLayout>
+
+              
+
+
+            </StackLayout>
+          </ViewCell>
+          
+        </DataTemplate>
+       
+      </ListView.ItemTemplate>
+    </ListView>
+   
+    <StackLayout>
+
+      <StackLayout Orientation="Vertical" Padding="5,5" Margin="5,5,5,5" >
+        <StackLayout HorizontalOptions="StartAndExpand">
+          <Label x:Name="adim" XAlign="Center"/>
+            <WebView x:Name="Browser" WidthRequest="500" HeightRequest="500" BackgroundColor="LightGray"  />
+         
+
+        </StackLayout>
+
+      </StackLayout>
+
+
+
+    </StackLayout>
+  </StackLayout>
+
+</ContentPage>
+
+
+
+
+
+
+
+
+
+
+
